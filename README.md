@@ -1,2 +1,2 @@
 # Intelligent-document-summarization
-intelligent document summarization : Summarise the document uploaded using summarise modal BART large cnn model
+intelligent document summarization : Summarise the document uploaded using summarise model BART large cnn model
