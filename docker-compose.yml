@@ -1,0 +1,30 @@
+# version: '6'
+
+# services:
+#   web:
+#     build: ./intellidoc
+#     command: python manage.py runserver 0.0.0.0:8000
+#     volumes:
+#       - ./intellidoc/:/usr/src/intellidoc/
+#     ports:
+#       - 8000:8000
+#     env_file:
+#       - ./.env
+
+version: '5'
+
+services:
+  web:
+    build: .
+    command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - textsum
+
+  textsum:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: text123

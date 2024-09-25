@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ document.title }} - Details</title>
+</head>
+<body>
+    <h1>{{ document.title }}</h1>
+    
+    <p><strong>Uploaded File:</strong> <a href="{{ document.uploaded_file.url }}">{{ document.uploaded_file.name }}</a></p>
+
+    <p><strong>Summary:</strong> {{ summary|default:"No Summary Obtained." }}</p>
+    <!-- Add any additional content you want to display -->
+    <a href="{% url 'file_list' %}">Back to File List</a>
+</body>
+</html>
